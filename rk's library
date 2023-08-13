@@ -1,0 +1,33 @@
+class library:
+  def __init__ (ran,data):
+    ran.booklist=data
+
+
+
+def show (ran) :
+  print(ran.booklist)
+
+def lendbook(ran,bookname):
+  if bookname in ran.booklist:
+    ran.booklist.remove(bookname)
+    print("thank you, book issued",bookname)
+    return True
+  else:
+    print("book unavailable")
+    return False
+
+
+class customer:
+  def request_book(ran):
+    print("enter the book")
+    ran.book=input()
+    return ran.book
+
+  def add_book(ran,bookname1):
+    ran.booklist1.append(bookname1)
+
+  def show(ran):
+    print(ran.booklist1)
+
+  def __init__ (ran):
+    ran.booklist1=[]
